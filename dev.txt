@@ -9,5 +9,5 @@
 172.31.52.18
 
 [control]
-172.31.14.132
+172.31.14.132 ansible_connection=local
 
