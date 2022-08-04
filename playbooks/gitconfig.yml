@@ -1,5 +1,9 @@
-- hosts: localhost
+---
+
+- name: Ensure ~/.gitconfig copied from ../files/master.gitconfig
+  hosts: localhost
   tasks:
-  - copy: 
-      src: "../files/master.gitconfig"
-      dest: "~/.gitconfig"
+    - name: Copy master.gitconfig to ~/.gitconfig
+      copy: 
+        src: "../files/master.gitconfig"
+        dest: "~/.gitconfig"
