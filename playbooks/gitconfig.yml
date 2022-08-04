@@ -1,3 +1,5 @@
 hosts: localhost
 tasks:
-- copy: src="../files/master.gitconfig" dest="../files/master.gitconfig"
+- copy: 
+  src: "../files/master.gitconfig"
+  dest: "./.gitconfig"
