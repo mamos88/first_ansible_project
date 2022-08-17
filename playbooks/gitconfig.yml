@@ -7,18 +7,18 @@
     become: yes
 
 
-- name: Ensure ~/.gitconfig copied from ../files/master.gitconfig
-  hosts: all
-  tasks:
-    - name: first show no config in targets
-      command: git config --global --list
-
-
 # - name: Ensure ~/.gitconfig copied from ../files/master.gitconfig
 #   hosts: all
 #   tasks:
-#     - name: Copy master.gitconfig to ~/.gitconfig
-#       copy: 
-#         src: "../files/master.gitconfig"
-#         dest: "~/.gitconfig"
+#     - name: first show no config in targets
+#       command: git config --global --list
+
+
+- name: Ensure ~/.gitconfig copied from ../files/master.gitconfig
+  hosts: all
+  tasks:
+    - name: Copy master.gitconfig to ~/.gitconfig
+      copy: 
+        src: "../files/master.gitconfig"
+        dest: "~/.gitconfig"
 
