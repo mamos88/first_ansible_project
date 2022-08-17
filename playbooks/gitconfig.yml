@@ -1,17 +1,17 @@
 ---
 
+- name: Ensure git installed
+  hosts: all
+  tasks:
+  - package: name=git state=latest
+    become: yes
+
+
 - name: Ensure ~/.gitconfig copied from ../files/master.gitconfig
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Copy master.gitconfig to ~/.gitconfig
       copy: 
         src: "../files/master.gitconfig"
         dest: "~/.gitconfig"
 
-- name: Ensure packages are installed
-  hosts: localhost
-  become: yes
-  tasks:
-  - apt:
-      name: jq
-      state: latest
