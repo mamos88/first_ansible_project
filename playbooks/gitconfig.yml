@@ -8,10 +8,9 @@
         src: "../files/master.gitconfig"
         dest: "~/.gitconfig"
 
-- name: Ensure homebrew packages are installed
+- name: Ensure packages are installed
   hosts: localhost
   tasks:
-  - homebrew: name=bat state=latest
-  - homebrew:
+  - apt:
       name: jq
       state: latest
