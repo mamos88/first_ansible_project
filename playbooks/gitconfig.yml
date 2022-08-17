@@ -10,6 +10,7 @@
 
 - name: Ensure packages are installed
   hosts: localhost
+  become: yes
   tasks:
   - apt:
       name: jq
