@@ -1,13 +1,13 @@
 [loadbalancer]
-lb ansible_host=172.31.49.161
+lb ansible_host=172.31.51.23
 
 [webserver]
-web1 ansible_host=172.31.49.171
+web1 ansible_host=172.31.57.200
 
 
 [database]
-db ansible_host=172.31.58.8
+db ansible_host=172.31.59.195
 
 [control]
-controller ansible_host=172.31.61.33 ansible_connection=local
+controller ansible_host=172.31.55.82 ansible_connection=local
 
