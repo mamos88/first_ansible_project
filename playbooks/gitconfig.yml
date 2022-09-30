@@ -17,8 +17,24 @@
 - name: Ensure ~/.gitconfig copied from ../files/master.gitconfig
   hosts: all
   tasks:
+
+    - name: First show config prior to execution
+      command: git config --global --list
+      ignore_errors: yes
+      register: git_config_before
+
+    - name: show git config output always -verbosity 0 is default for debug module
+      debug: var=git_config_before
+
     - name: Copy master.gitconfig to ~/.gitconfig
       copy: 
         src: "../files/master.gitconfig"
         dest: "~/.gitconfig"
 
+    - name: show newly added config
+      command: git config --global --list
+      ignore_errors: yes
+      register: git_config_after
+
+    - name: ensure to show git config after with debug - this time oly show stdout_lines
+      debug: var=git_config_after.stdout_lines
