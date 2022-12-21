@@ -1,4 +1,4 @@
 [ubuntu]
-web1
-db
+webservers
+databases
 controller
