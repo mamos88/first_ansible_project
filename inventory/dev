@@ -1,13 +1,12 @@
-[loadbalancer]
-lb ansible_host=172.31.10.197
-
-[webserver]
-web1 ansible_host=172.31.8.248
+[webservers]
+web1 ansible_host=172.31.49.172
+web0 ansible_host=ip-172-31-59-18.ec2.internal
 
 
-[database]
-db ansible_host=172.31.6.13
+[databases]
+db0 ansible_host=172.31.61.101
+db1 ansible_host=172.31.58.82
 
 [control]
-controller ansible_host=172.31.10.102 ansible_connection=local
+controller ansible_host=172.31.60.42 ansible_connection=local
 

@@ -1,5 +1,4 @@
 [ubuntu]
 web1
-lb
 db
 controller
